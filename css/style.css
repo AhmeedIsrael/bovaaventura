@@ -1791,24 +1791,44 @@ img {
 .stat-card {
   background: #FFFFFF;
   border: 1px solid var(--color-divider);
-  border-radius: 8px;
-  padding: 24px 16px;
+  border-radius: 10px;
+  padding: 0 !important;
+  overflow: hidden;
   text-align: center;
   font-weight: 600;
-  font-size: 0.95rem;
   color: #111111;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .stat-card:hover {
   border-color: var(--color-accent);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(139, 46, 31, 0.12);
 }
 
-.stat-card-icon {
-  font-size: 1.8rem;
-  margin-bottom: 8px;
+.stat-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid var(--color-divider);
 }
+
+.stat-card-title {
+  padding: 14px 12px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-dark);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .bridge-quote {
   font-family: var(--font-heading);
@@ -2110,7 +2130,20 @@ img {
     padding: 14px 16px;
     font-size: 0.92rem;
   }
+  .story-stat-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    margin-bottom: 32px !important;
+  }
+  .stat-card-img {
+    height: 150px !important;
+  }
+  .stat-card-title {
+    padding: 10px 8px !important;
+    font-size: 0.84rem !important;
+  }
 }
+
 
 /* ==========================================================================
    ALTERNATING SECTION BACKGROUNDS & SALES PAGE TYPOGRAPHY
@@ -2162,6 +2195,112 @@ img {
   background-size: 360px auto !important;
   color: #111111 !important;
 }
+
+/* Homepage Product Sales Price Bar & Action Buttons */
+.product-price-sales-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin: 22px 0 26px 0;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+}
+
+.product-price-sales-bar .current-price {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #E5B880;
+  letter-spacing: -0.02em;
+}
+
+.product-price-sales-bar .original-price {
+  font-size: 1.05rem;
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}
+
+.product-price-sales-bar .product-size-badge {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  padding: 4px 10px;
+  background: var(--color-accent);
+  color: #FFFFFF;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+.product-sales-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.product-sales-actions button {
+  cursor: pointer;
+}
+
+/* Pronounced, High-Visibility Modal & Drawer Exit Buttons */
+.modal-close-btn,
+#modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--color-accent) !important;
+  color: #FFFFFF !important;
+  border: 2px solid #FFFFFF;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-close-btn:hover,
+#modal-close-btn:hover {
+  background-color: #111111 !important;
+  color: #FFFFFF !important;
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.btn-close-drawer {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-accent) !important;
+  color: #FFFFFF !important;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-close-drawer:hover {
+  background-color: #111111 !important;
+  transform: scale(1.08);
+}
+
+
 
 
 

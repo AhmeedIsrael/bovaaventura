@@ -75,14 +75,18 @@
       </nav>
 
       <div class="header-icon-actions">
-        <button id="wishlist-toggle-btn" class="icon-btn" title="View Wishlist">
+        <button id="wishlist-toggle-btn" class="icon-btn" title="View Wishlist" aria-label="View Wishlist">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
           <span id="wishlist-count" class="icon-badge">0</span>
         </button>
 
-        <button id="cart-toggle-btn" class="icon-btn" title="View Cart">
+        <button id="cart-toggle-btn" class="icon-btn" title="View Cart" aria-label="View Cart">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
           <span id="cart-count" class="icon-badge">0</span>
+        </button>
+
+        <button id="mobile-menu-btn" class="icon-btn mobile-menu-toggle" title="Toggle Navigation Menu" aria-label="Toggle Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
       </div>
     </div>
@@ -194,55 +198,104 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="brand-logo" style="margin-bottom: 12px;">
-            <img src="Assets/BOVA-Logo.jpeg" alt="BOVA Logo" style="height: 42px;">
-            <div class="brand-title" style="color: #ffffff;">BOVA <span style="color: var(--color-primary);">ADVENTURA</span></div>
+        <div class="footer-col-brand">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <img src="Assets/BOVA-Logo.jpeg" alt="BOVA Adventura Logo" style="height: 44px; width: 44px;">
+            <div class="brand-title" style="color: #FFFFFF;">
+              BOVA <span style="color: var(--color-accent);">ADVENTURA</span>
+            </div>
           </div>
-          <p>Handcrafting 100% authentic, unrefined West African skincare essentials and raw wild harvest honey for your natural wellbeing.</p>
+          <p style="color: #a0a0a0; font-size: 0.92rem; max-width: 320px; line-height: 1.7; margin-bottom: 20px;" class="footer-brand-desc">
+            Pure beauty, naturally crafted. Handcrafted 100% raw West African skincare and wild harvest honey from Oyo State.
+          </p>
+          <div style="font-size: 0.85rem; color: #888888;">
+            Ships Nationwide · Nigeria 🇳🇬
+          </div>
         </div>
 
         <div>
-          <h4 class="footer-heading">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="shop.html">Shop Store</a></li>
-            <li><a href="about.html">Our Story</a></li>
-            <li><a href="blog.html">Articles</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+          <h4 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent); margin-bottom: 20px;">Navigation</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+            <li><a href="index.html" style="color: #cccccc;">Home</a></li>
+            <li><a href="about.html" style="color: #cccccc;">About Us</a></li>
+            <li><a href="shop.html" style="color: #cccccc;">Store</a></li>
+            <li><a href="blog.html" style="color: #cccccc;">Blog</a></li>
+            <li><a href="contact.html" style="color: #cccccc;">Contact</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-heading">Customer Care</h4>
-          <ul class="footer-links">
-            <li><a href="#">Shipping & Returns</a></li>
-            <li><a href="#">Track Order</a></li>
-            <li><a href="#">Wholesale Inquiries</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+          <h4 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent); margin-bottom: 20px;">Our Products</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+            <li><a href="shop.html" style="color: #cccccc;">Raw Shea Butter</a></li>
+            <li><a href="shop.html" style="color: #cccccc;">African Black Soap</a></li>
+            <li><a href="shop.html" style="color: #cccccc;">Pure Wild Honey</a></li>
+            <li><a href="shop.html" style="color: #cccccc;">Cold-Pressed Coconut Oil</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-heading">Newsletter</h4>
-          <p style="font-size: 0.85rem; margin-bottom: 12px;">Subscribe for natural skincare tips & 10% off your first order!</p>
-          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed!');">
-            <input type="email" placeholder="Your email..." required>
-            <button type="submit">Join</button>
-          </form>
+          <h4 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent); margin-bottom: 20px;">Connect With Us</h4>
+          <p style="color: #cccccc; font-size: 0.9rem; margin-bottom: 14px;">Questions or bulk orders?</p>
+          <a href="mailto:hello@bovaadventura.com" style="color: #FFFFFF; font-weight: 600; font-size: 0.92rem; text-decoration: underline;">hello@bovaadventura.com</a>
+          <div style="display: flex; gap: 14px; margin-top: 20px;" class="footer-social-links">
+            <a href="#" style="color: #cccccc;" aria-label="Instagram">Instagram</a> ·
+            <a href="#" style="color: #cccccc;" aria-label="Facebook">Facebook</a> ·
+            <a href="#" style="color: #cccccc;" aria-label="Google">Google</a>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 BOVA Adventura. All Rights Reserved.</div>
-        <div style="display: flex; gap: 16px;">
-          <span>🌿 100% Organic</span>
-          <span>✨ Ethically Harvested</span>
-          <span>🐇 Cruelty Free</span>
-        </div>
+        <div>© 2026 BOVA Adventura. All rights reserved. Handcrafted naturally in Nigeria.</div>
+        <div>Designed for Pure Quality & Conversion</div>
       </div>
     </div>
   </footer>
 
+
+  <!-- CART DRAWER -->
+  <div id="cart-drawer" class="drawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Your Cart (<span id="cart-count">0</span>)</h3>
+      <button class="btn-close-drawer" aria-label="Close Cart">&times;</button>
+    </div>
+    <div id="cart-drawer-body" class="drawer-body">
+      <!-- Items dynamically populated via app.js -->
+    </div>
+    <div class="drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Total:</span>
+        <span id="cart-subtotal">₦ 0</span>
+      </div>
+      <button onclick="openCheckoutModal()" class="btn-accent" style="width: 100%;">Proceed to Checkout →</button>
+    </div>
+  </div>
+
+  <!-- WISHLIST DRAWER -->
+  <div id="wishlist-drawer" class="drawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Your Saved Items (<span id="wishlist-count">0</span>)</h3>
+      <button class="btn-close-drawer" aria-label="Close Wishlist">&times;</button>
+    </div>
+    <div id="wishlist-drawer-body" class="drawer-body">
+      <!-- Items dynamically populated via app.js -->
+    </div>
+  </div>
+
+  <!-- OVERLAY BACKDROP -->
+  <div id="overlay-backdrop" class="overlay-backdrop"></div>
+
+  <!-- QUICKVIEW / CHECKOUT MODAL -->
+  <div id="quickview-modal" class="modal">
+    <button id="modal-close-btn" class="modal-close-btn" aria-label="Close Modal">&times;</button>
+    <div id="quickview-modal-content"></div>
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Main JavaScript -->
   <script src="js/app.js"></script>
 </body>
 </html>

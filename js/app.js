@@ -244,8 +244,21 @@ function setupEventListeners() {
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const navMenu = document.querySelector('.nav-menu');
   if (mobileMenuBtn && navMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        navMenu.classList.remove('active');
+      }
     });
   }
 
@@ -253,6 +266,7 @@ function setupEventListeners() {
     btn.addEventListener('click', closeAllOverlays);
   });
 }
+
 
 
 // 6. FILTER & SORT LOGIC
