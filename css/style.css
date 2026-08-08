@@ -2110,18 +2110,49 @@ img {
     grid-template-columns: 1fr;
   }
   .final-cta-buttons {
-    flex-direction: column;
-    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    width: 100% !important;
   }
-  .final-cta-buttons .btn-accent, .final-cta-buttons .btn-outline {
-    width: 100%;
+  .final-cta-buttons .btn-accent, .final-cta-buttons .btn-outline, .final-cta-buttons .btn-outline-light {
+    flex: 1 1 0% !important;
+    width: 50% !important;
+    padding: 12px 6px !important;
+    font-size: 0.84rem !important;
+    white-space: nowrap !important;
+    justify-content: center !important;
   }
   .hero-buttons {
-    flex-direction: column;
-    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    width: 100% !important;
   }
   .hero-buttons .btn-accent, .hero-buttons .btn-outline {
-    width: 100%;
+    flex: 1 1 0% !important;
+    width: 50% !important;
+    padding: 12px 6px !important;
+    font-size: 0.85rem !important;
+    white-space: nowrap !important;
+    justify-content: center !important;
+  }
+  .product-sales-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .product-sales-actions .btn-accent, .product-sales-actions .btn-outline-light, .product-sales-actions button {
+    flex: 1 1 0% !important;
+    width: 50% !important;
+    padding: 12px 6px !important;
+    font-size: 0.84rem !important;
+    white-space: nowrap !important;
+    justify-content: center !important;
   }
   .trust-bar-grid {
     display: grid !important;
@@ -2189,7 +2220,6 @@ img {
 
 
 
-
 /* ==========================================================================
    ALTERNATING SECTION BACKGROUNDS & SALES PAGE TYPOGRAPHY
    ========================================================================== */
@@ -2197,7 +2227,7 @@ img {
 /* Hero Section Professional Background Pattern 1 */
 .hero-section {
   background-color: #FFFFFF !important;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.89)), url('../Assets/Background+pattern_1.png'), url('../Assets/Background%2Bpattern_1.png') !important;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.89)), url('../Assets/Background%2Bpattern_1.png'), url('../Assets/Background+pattern_1.png') !important;
   background-repeat: repeat !important;
   background-position: center !important;
   background-size: 320px auto !important;
@@ -2207,7 +2237,7 @@ img {
 /* Faint Professional Alternating Patterns */
 .bg-dark-brown {
   background-color: #25110B !important;
-  background-image: linear-gradient(180deg, rgba(37, 17, 11, 0.96), rgba(37, 17, 11, 0.98)), url('../Assets/Background+pattern.png') !important;
+  background-image: linear-gradient(180deg, rgba(37, 17, 11, 0.96), rgba(37, 17, 11, 0.98)), url('../Assets/Background%2Bpattern.png'), url('../Assets/Background+pattern.png') !important;
   background-repeat: repeat !important;
   background-position: center !important;
   background-size: 380px auto !important;
@@ -2216,7 +2246,7 @@ img {
 
 .bg-oxblood {
   background-color: #6D2418 !important;
-  background-image: linear-gradient(180deg, rgba(109, 36, 24, 0.96), rgba(109, 36, 24, 0.98)), url('../Assets/Background+pattern_3.png') !important;
+  background-image: linear-gradient(180deg, rgba(109, 36, 24, 0.96), rgba(109, 36, 24, 0.98)), url('../Assets/Background%2Bpattern_3.png'), url('../Assets/Background+pattern_3.png') !important;
   background-repeat: repeat !important;
   background-position: center !important;
   background-size: 400px auto !important;
@@ -2225,7 +2255,7 @@ img {
 
 .bg-white {
   background-color: #FFFFFF !important;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.975), rgba(255, 255, 255, 0.988)), url('../Assets/Background+pattern_1.png') !important;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.975), rgba(255, 255, 255, 0.988)), url('../Assets/Background%2Bpattern_1.png'), url('../Assets/Background+pattern_1.png') !important;
   background-repeat: repeat !important;
   background-position: center !important;
   background-size: 320px auto !important;
@@ -2234,7 +2264,7 @@ img {
 
 .bg-warm-sand {
   background-color: #FAF8F5 !important;
-  background-image: linear-gradient(180deg, rgba(250, 248, 245, 0.96), rgba(250, 248, 245, 0.985)), url('../Assets/Background+pattern_2.png') !important;
+  background-image: linear-gradient(180deg, rgba(250, 248, 245, 0.96), rgba(250, 248, 245, 0.985)), url('../Assets/Background%2Bpattern_2.png'), url('../Assets/Background+pattern_2.png') !important;
   background-repeat: repeat !important;
   background-position: center !important;
   background-size: 360px auto !important;
