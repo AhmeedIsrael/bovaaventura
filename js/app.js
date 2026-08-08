@@ -262,10 +262,11 @@ function setupEventListeners() {
     });
   }
 
-  document.querySelectorAll('.btn-close-drawer, .btn-close-modal').forEach(btn => {
+  document.querySelectorAll('.btn-close-drawer, .btn-close-modal, .modal-close-btn, #modal-close-btn').forEach(btn => {
     btn.addEventListener('click', closeAllOverlays);
   });
 }
+
 
 
 
@@ -603,9 +604,13 @@ function openQuickView(productId) {
     </div>
   `;
 
+  const closeBtn = document.getElementById('modal-close-btn');
+  if (closeBtn) closeBtn.onclick = closeAllOverlays;
+
   document.getElementById('overlay-backdrop')?.classList.add('active');
   modalEl.classList.add('active');
 }
+
 
 function adjustModalQty(delta) {
   const input = document.getElementById('modal-qty-input');
