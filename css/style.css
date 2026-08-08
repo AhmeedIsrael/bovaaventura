@@ -2112,47 +2112,53 @@ img {
   .final-cta-buttons {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    gap: 8px !important;
+    flex-wrap: wrap !important;
+    gap: 12px 10px !important;
+    row-gap: 12px !important;
     width: 100% !important;
   }
   .final-cta-buttons .btn-accent, .final-cta-buttons .btn-outline, .final-cta-buttons .btn-outline-light {
-    flex: 1 1 0% !important;
-    width: 50% !important;
-    padding: 12px 6px !important;
+    flex: 1 1 140px !important;
+    min-width: 140px !important;
+    padding: 12px 8px !important;
     font-size: 0.84rem !important;
     white-space: nowrap !important;
     justify-content: center !important;
+    margin-bottom: 8px !important;
   }
   .hero-buttons {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    gap: 8px !important;
+    flex-wrap: wrap !important;
+    gap: 12px 10px !important;
+    row-gap: 12px !important;
     width: 100% !important;
   }
   .hero-buttons .btn-accent, .hero-buttons .btn-outline {
-    flex: 1 1 0% !important;
-    width: 50% !important;
-    padding: 12px 6px !important;
+    flex: 1 1 140px !important;
+    min-width: 140px !important;
+    padding: 12px 8px !important;
     font-size: 0.85rem !important;
     white-space: nowrap !important;
     justify-content: center !important;
+    margin-bottom: 8px !important;
   }
   .product-sales-actions {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    gap: 8px !important;
+    flex-wrap: wrap !important;
+    gap: 12px 10px !important;
+    row-gap: 12px !important;
     width: 100% !important;
   }
   .product-sales-actions .btn-accent, .product-sales-actions .btn-outline-light, .product-sales-actions button {
-    flex: 1 1 0% !important;
-    width: 50% !important;
-    padding: 12px 6px !important;
+    flex: 1 1 140px !important;
+    min-width: 140px !important;
+    padding: 12px 8px !important;
     font-size: 0.84rem !important;
     white-space: nowrap !important;
     justify-content: center !important;
+    margin-bottom: 8px !important;
   }
   .trust-bar-grid {
     display: grid !important;
@@ -2290,10 +2296,11 @@ img {
   font-family: var(--font-heading);
   font-size: 1.6rem;
   font-weight: 800;
-  color: #FFD59E !important;
+  color: #E5B880 !important;
   letter-spacing: -0.02em;
   white-space: nowrap;
 }
+
 
 .product-price-sales-bar .original-price {
   font-size: 1rem;
