@@ -456,6 +456,8 @@ function closeAllOverlays() {
   document.getElementById('overlay-backdrop')?.classList.remove('active');
   document.querySelectorAll('.drawer, .modal').forEach(el => el.classList.remove('active'));
 }
+window.closeAllOverlays = closeAllOverlays;
+window.openQuickView = openQuickView;
 
 function renderCartDrawer() {
   const bodyEl = document.getElementById('cart-drawer-body');
@@ -559,6 +561,7 @@ function openQuickView(productId) {
   if (!modalEl || !modalContentEl) return;
 
   modalContentEl.innerHTML = `
+    <button class="modal-close-btn" onclick="closeAllOverlays()" aria-label="Close Modal">&times;</button>
     <div class="modal-grid">
       <div class="modal-img-area">
         <img src="${product.image}" alt="${product.name}">
@@ -604,12 +607,10 @@ function openQuickView(productId) {
     </div>
   `;
 
-  const closeBtn = document.getElementById('modal-close-btn');
-  if (closeBtn) closeBtn.onclick = closeAllOverlays;
-
   document.getElementById('overlay-backdrop')?.classList.add('active');
   modalEl.classList.add('active');
 }
+
 
 
 function adjustModalQty(delta) {
