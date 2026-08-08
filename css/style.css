@@ -231,14 +231,17 @@ img {
   display: flex;
   align-items: center;
   gap: 14px;
+  text-decoration: none;
 }
 
 .brand-logo img {
-  height: 50px;
-  width: auto;
+  height: 52px;
+  width: 52px;
+  object-fit: cover;
   border-radius: 50%;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid var(--color-border);
+  flex-shrink: 0;
 }
 
 .brand-title {
@@ -253,12 +256,13 @@ img {
 .brand-title span {
   display: block;
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.24em;
-  color: var(--color-primary);
+  color: var(--color-accent);
   text-transform: uppercase;
 }
+
 
 .nav-menu {
   display: flex;
@@ -2142,7 +2146,48 @@ img {
     padding: 10px 8px !important;
     font-size: 0.84rem !important;
   }
+  .header-inner {
+    height: 76px !important;
+  }
+  .brand-logo {
+    gap: 12px !important;
+  }
+  .brand-logo img {
+    height: 46px !important;
+    width: 46px !important;
+    min-width: 46px !important;
+  }
+  .brand-title {
+    font-size: 1.35rem !important;
+  }
+  .brand-title span {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.22em !important;
+  }
+  .product-price-sales-bar {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding: 6px 12px !important;
+    margin: 14px 0 18px 0 !important;
+    max-width: 100% !important;
+    flex-wrap: nowrap !important;
+    box-sizing: border-box !important;
+  }
+  .product-price-sales-bar .current-price {
+    font-size: 1.3rem !important;
+  }
+  .product-price-sales-bar .original-price {
+    font-size: 0.9rem !important;
+  }
+  .product-price-sales-bar .product-size-badge {
+    font-size: 0.65rem !important;
+    padding: 3px 6px !important;
+  }
 }
+
+
 
 
 /* ==========================================================================
@@ -2200,40 +2245,44 @@ img {
 .product-price-sales-bar {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  margin: 22px 0 26px 0;
-  padding: 10px 18px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  gap: 12px;
+  margin: 20px 0 24px 0;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
   border-radius: 8px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
+  max-width: 100%;
+  flex-wrap: nowrap;
 }
 
 .product-price-sales-bar .current-price {
   font-family: var(--font-heading);
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: #E5B880;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #FFD59E !important;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .product-price-sales-bar .original-price {
-  font-size: 1.05rem;
+  font-size: 1rem;
   text-decoration: line-through;
-  color: rgba(255, 255, 255, 0.5);
+  color: #D1C7BD !important;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .product-price-sales-bar .product-size-badge {
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 700;
   padding: 4px 10px;
-  background: var(--color-accent);
-  color: #FFFFFF;
+  background: var(--color-accent) !important;
+  color: #FFFFFF !important;
   border-radius: 4px;
-  margin-left: 4px;
+  white-space: nowrap;
 }
 
 .product-sales-actions {
@@ -2246,6 +2295,7 @@ img {
 .product-sales-actions button {
   cursor: pointer;
 }
+
 
 /* Pronounced, High-Visibility Modal & Drawer Exit Buttons */
 .modal-close-btn,
